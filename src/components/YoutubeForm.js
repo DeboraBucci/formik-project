@@ -46,38 +46,53 @@ const YoutubeForm = () => {
 
   return (
     <form onSubmit={formik.handleSubmit} className={classes.form}>
-      <label htmlFor="text" id="name">
-        Name
-      </label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        onChange={formik.handleChange}
-        value={formik.values.name}
-      />
+      <div>
+        <label htmlFor="text" id="name">
+          Name
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          onChange={formik.handleChange}
+          value={formik.values.name}
+        />
+        {formik.errors.name && (
+          <div className={classes.errors}>{formik.errors.name}</div>
+        )}
+      </div>
 
-      <label htmlFor="text" id="email">
-        Email
-      </label>
-      <input
-        type="text"
-        id="email"
-        name="email"
-        onChange={formik.handleChange}
-        value={formik.values.email}
-      />
+      <div>
+        <label htmlFor="text" id="email">
+          Email
+        </label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          onChange={formik.handleChange}
+          value={formik.values.email}
+        />
+        {formik.errors.email && (
+          <div className={classes.errors}>{formik.errors.email}</div>
+        )}
+      </div>
 
-      <label htmlFor="text" id="channel">
-        Channel
-      </label>
-      <input
-        type="text"
-        id="channel"
-        name="channel"
-        onChange={formik.handleChange}
-        value={formik.values.channel}
-      />
+      <div>
+        <label htmlFor="text" id="channel">
+          Channel
+        </label>
+        <input
+          type="text"
+          id="channel"
+          name="channel"
+          onChange={formik.handleChange}
+          value={formik.values.channel}
+        />
+        {formik.errors.channel && (
+          <div className={classes.errors}>{formik.errors.channel}</div>
+        )}
+      </div>
 
       <button type="submit">Submit</button>
     </form>
