@@ -1,8 +1,10 @@
 import React from "react";
 
+import classes from "./YoutubeForm.module.css";
+
 const YoutubeForm = () => {
   return (
-    <form>
+    <form className={classes.form}>
       <label htmlFor="text" id="name">
         Name
       </label>
