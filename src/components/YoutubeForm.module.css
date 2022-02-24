@@ -21,7 +21,8 @@
   font-size: 1.1rem;
 }
 
-.form input {
+.form input,
+.form textarea {
   padding: 0.5rem 1rem;
 
   border: 1px solid rgba(0, 0, 0, 0.2);

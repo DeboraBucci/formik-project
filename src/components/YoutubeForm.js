@@ -9,6 +9,8 @@ const YoutubeForm = () => {
     name: "",
     email: "",
     channel: "",
+    comments: "",
+    address: "",
   };
 
   const onSubmit = (values) => {
@@ -50,6 +52,29 @@ const YoutubeForm = () => {
           </label>
           <Field type="text" id="channel" name="channel" />
           <ErrorMessage name="channel" />
+        </div>
+
+        <div>
+          <label htmlFor="text" id="comments">
+            Comments
+          </label>
+          <Field as="textarea" id="comments" name="comments" />
+        </div>
+
+        <div>
+          <label htmlFor="text" id="address">
+            Address
+          </label>
+          <Field name="address" />
+          {(props) => {
+            const { field, form, meta } = props;
+            return (
+              <div>
+                <input id="address" {...field} />
+                {meta.touched && meta.error && <div>{meta.error}</div>}
+              </div>
+            );
+          }}
         </div>
 
         <button type="submit">Submit</button>
