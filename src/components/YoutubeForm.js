@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 import classes from "./YoutubeForm.module.css";
+import TextError from "./TextError";
 
 const YoutubeForm = () => {
   const initialValues = {
@@ -35,7 +36,7 @@ const YoutubeForm = () => {
             Name
           </label>
           <Field type="text" id="name" name="name" />
-          <ErrorMessage name="name" />
+          <ErrorMessage name="name" component={TextError} />
         </div>
 
         <div>
@@ -43,7 +44,7 @@ const YoutubeForm = () => {
             Email
           </label>
           <Field type="text" id="email" name="email" />
-          <ErrorMessage name="email" />
+          <ErrorMessage name="email" component={TextError} />
         </div>
 
         <div>
@@ -51,7 +52,7 @@ const YoutubeForm = () => {
             Channel
           </label>
           <Field type="text" id="channel" name="channel" />
-          <ErrorMessage name="channel" />
+          <ErrorMessage name="channel" component={TextError} />
         </div>
 
         <div>
